@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDSSpq3yKnZBz-77pgJKOrx8dvLXu1zFUg",
-  authDomain: "hospital-form-95814.firebaseapp.com",
-  projectId: "hospital-form-95814",
-  storageBucket: "hospital-form-95814.firebasestorage.app",
-  messagingSenderId: "618947705318",
-  appId: "1:618947705318:web:f86875431dd1c725153e27"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
