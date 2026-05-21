@@ -81,12 +81,12 @@ function App() {
         <AnimatePresence mode="wait">
           {step === 1 && (
             <FormStep key="s1">
-              <FormField label="Full Name" required name="fullName" value={formData.fullName} onChange={handleChange} />
-              <div className="grid grid-cols-2 gap-4">
-                <FormField label="Date of Birth" required name="dob" type="date" value={formData.dob} onChange={handleChange} />
+              <FormField label="Full Name" name="fullName" value={formData.fullName} onChange={handleChange} />
+              <div className="grid gap-4">
+                <FormField label="Date of Birth" name="dob" type="date" value={formData.dob} onChange={handleChange} />
                 <FormField label="Gender" name="gender" required as="select" options={["Male", "Female", "Other"]} value={formData.gender} onChange={handleChange} />
               </div>
-              <FormField label="Phone 1" name="tel1" required value={formData.tel1} onChange={handleChange} />
+              <FormField label="Phone 1" name="tel1" value={formData.tel1} onChange={handleChange} />
               <FormField label="Phone 2" name="tel2" value={formData.tel2} onChange={handleChange} />
               <FormField label="Email" name="email" value={formData.email} onChange={handleChange} />
               <button type="button" onClick={() => setStep(2)} className="w-full bg-purple-900 hover:bg-purple-700 duration-400 text-white py-3 rounded-xl font-bold mt-4">Next</button>
@@ -95,13 +95,13 @@ function App() {
 
           {step === 2 && (
             <FormStep key="s2">
-              <FormField label="Current Address" required name="currentAddress" as="textarea" value={formData.currentAddress} onChange={handleChange} />
-              <FormField label="Permanent Address" required name="permanentAddress" as="textarea" value={formData.permanentAddress} onChange={handleChange} />
+              <FormField label="Current Address" name="currentAddress" as="textarea" value={formData.currentAddress} onChange={handleChange} />
+              <FormField label="Permanent Address"  name="permanentAddress" as="textarea" value={formData.permanentAddress} onChange={handleChange} />
               <div className="grid grid-cols-2 gap-4">
-                <FormField label="Nationality" name="nationality" required value={formData.nationality} onChange={handleChange} />
+                <FormField label="Nationality" name="nationality"  value={formData.nationality} onChange={handleChange} />
                 <FormField label="State of Origin" name="stateOfOrigin" required value={formData.stateOfOrigin} onChange={handleChange} />
               </div>
-              <FormField label="Occupation" name="occupation" required value={formData.occupation} onChange={handleChange} />
+              <FormField label="Occupation" name="occupation" value={formData.occupation} onChange={handleChange} />
               <div className="flex gap-4 mt-6">
                 <button type="button" onClick={() => setStep(1)} className="flex-1 bg-white/50 hover:bg-white/20 duration-400 text-white py-3 rounded-xl">Back</button>
                 <button type="button" onClick={() => setStep(3)} className="flex-1 bg-purple-900 hover:bg-purple-700 duration-400 text-white py-3 rounded-xl">Next</button>
