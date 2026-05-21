@@ -24,10 +24,10 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const requiredFields = [
-    "fullName", "maritalStatus", "dob", "tel1", "gender", "allergies",
-    "currentAddress", "permanentAddress", "nationality", "insuranceName", "insuranceId",
+    "fullName", "maritalStatus", "dob", "tel1", "gender",
+    "currentAddress", "permanentAddress", "nationality",
     "stateOfOrigin", "occupation", "gender",
-    "emergencyName", "emergencyPhone", "nextOfKin","emergencyAddress","nextOfKin"
+    "emergencyName", "emergencyPhone", "nextOfKin","emergencyAddress",
   ];
 
   const handleSubmit = async () => {
@@ -131,7 +131,7 @@ function App() {
           {step === 4 && (
             <FormStep key="s4">
               <FormField label="Emergency Name" name="emergencyName" value={formData.emergencyName} onChange={handleChange} />
-              <FormField label="Emergency Phone" name="emergencyPhone" value={formData.emergencyPhone} onChange={handleChange} />
+              <FormField label="Emergency Contact" name="emergencyPhone" value={formData.emergencyPhone} onChange={handleChange} />
               <FormField label="Emergency Address" name="emergencyAddress" value={formData.emergencyAddress} onChange={handleChange} />
               <FormField label="Insurance Name" name="insuranceName" value={formData.insuranceName} onChange={handleChange} />
               <FormField label="Insurance ID" name="insuranceId" value={formData.insuranceId} onChange={handleChange} />
